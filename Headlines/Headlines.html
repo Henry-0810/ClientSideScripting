@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+    <script src='newsitems.js'></script>
+  </head>
+  <body>
+  <h1>News Item</h1><br>
+  <label for='headlines'>Choose a headline:</label>
+    <select name='headlines' id='headlines'>
+        <option value='news 1' onclick="document.getElementById('content').value = newsItem1;">News 1</option>
+        <option value='news 2' onclick="document.getElementById('content').value = newsItem2;">News 2</option>
+        <option value='news 3' onclick="document.getElementById('content').value = newsItem3;">News 3</option>
+        <option value='news 4' onclick="document.getElementById('content').value = newsItem4;">News 4</option>
+        <option value='news 5' onclick="document.getElementById('content').value = newsItem5;">News 5</option>
+    </select>
+    <textarea id='content' value='' rols = '10' cols = '5'>
+    </textarea>
+        
+  </body>
+</html>
