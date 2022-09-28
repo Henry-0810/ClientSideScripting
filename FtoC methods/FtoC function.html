@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+  </head>
+  <body>
+  <h1>Fahrenheit to Celsius Converter</h1>
+  <form action="">
+  
+  Fahrenheit <input type ='text' id='f' value=''><br>
+  Result <input type ='text' id='result' value=''><br>
+  <input type='button' onclick = 'FCConv()' value='Convert FtoC'>
+  
+  </form>
+  <script>
+    function FCConv(){
+        document.getElementById('result').value = (Number(document.getElementById('f').value - 32)*(5/9));
+    }
+    </script>
+
+  </body>
+</html>
