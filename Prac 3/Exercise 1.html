@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+    <script>
+    function CalcFee(num){
+        let total = 0;
+        (num <= 25.00)? total = num + 1.5: total = num*(1.1); 
+        alert(Number(total));
+        return Number(total);
+        };
+    </script>
+  </head>
+  <body>
+  <h1> Henry Co. Delivery</h1>
+  <form action=''>
+    <label for='price'>Purchase Price</label><br>
+    <input type='text' id='price' value=''><br>
+    <input type='button' onclick='document.getElementById("result").value = CalcFee(Number(document.getElementById("price").value));' value='Calculate'><br>
+    Total Cost of Order <input type='text' id='result' value=''><br>
+  </form>
+  
+  
+
+  </body>
+</html>
