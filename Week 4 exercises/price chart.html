@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+  </head>
+  <body>
+  <h1><u>Art Supply Shop</u></h1>
+  <script>
+  let input = prompt("How many brush you would like to purchase");
+  let i = 1;
+  let price = 5;
+  document.write(`<table><tr><th>Number of Brush</th><th>Price</th></tr>`);
+  while (i <= input){
+    
+    document.write(`<tr><td>${i}</td><td>${i*price}</td></tr>`);
+    i++;
+    }
+    document.write(`</table>`);
+
+  </script>
+
+  </body>
+</html>
