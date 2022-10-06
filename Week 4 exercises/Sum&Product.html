@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+  </head>
+  <body>
+  <script>
+    let times = Number(prompt("Input your size array"));
+    let arr = Array(times);
+    let sum = 0;
+    let product = 1;
+    for(let i = 0 ;i < arr.length;i++){
+        arr[i] = Number(prompt("Enter your numbers"));
+        sum += arr[i];
+        product *= arr[i];
+    }
+    alert("Sum of the array is: " + Number(sum) + "\nProduct of the array is: " + product);
+    </script>
+  </body>
+</html>
