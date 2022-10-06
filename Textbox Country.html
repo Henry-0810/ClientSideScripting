@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+    <script>
+    function currency(country){
+        let output;
+        switch(country){
+        case ("Australia"):
+            output = "AUD Australia Dollar";
+            break;
+        case ("Ireland"):
+            output = "Euro";
+            break;
+        case ("England"):
+            output = "Sterling";
+            break;
+        case ("China"):
+            output = "RMB";
+            break;
+        case ("Egypt"):
+            output = "EGP";
+            break;
+        case ("Iceland"):
+            output = "ISK";
+            break;
+        default:
+            output = "not knwon!";
+        }
+        return output;
+    }
+    </script>
+  </head>
+  <body>
+  <h1>Currency</h1>
+    <form action = "">
+    
+    Please enter a country <input type = "text" id = "c" value = ""><br>
+    Currency: <input type = "text" id = "result" value = ""><br>
+    <input type = "button" onclick = "document.getElementById('result').value = currency(document.getElementById('c').value);" value = "Press this!">
+    </form>
+    
+  </body>
+</html>
