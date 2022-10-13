@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='cs'>
+  <head>
+    <title></title>
+    <meta charset='utf-8'>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content=''>
+    <meta name='robots' content='all'>
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <link href='/favicon.png' rel='shortcut icon' type='image/png'>
+  </head>
+  <body>
+    <script>
+        let words = ["pancake","banana","fillet","steak"];
+        let guess = [];
+        let ans = words[(Math.floor(Math.random()*words.length))];
+        let correctWords = ans.length;
+        console.log(ans);
+        let attempts = prompt("How many attempts do you like to have?");
+        for(let i = 0; i < ans.length; i++){
+            guess[i] = '_';
+        }
+        console.log(guess.join(" "));
+        
+        for(let c = attempts;c>=0;c--){
+            let guessChar = prompt("Enter a letter!");
+            if(guessChar == null){
+                alert("enter something!!");
+                }
+            else if(!isNaN(guessChar)){
+                alert("Please enter again!");
+                }
+            else if(guessChar.length>1){
+                alert("You can only enter a character!!");
+                }
+            else{
+                for(let j = 0; j<ans.length;j++){
+                    if(guessChar == ans[j]){
+                        guess[j] = ans[j];
+                        correctWords--;
+                        }
+                    else{
+                        console.log("You have " + c + " chances left");
+                        }
+                    }
+                console.log(guess.join(" "));
+                }
+            
+            if(c==0){
+                if(correctWords == 0){
+                    console.log("Succesful! You've used " + c + " times to guess it right");
+                    break;
+                }
+                else{
+                    console.log("U suck!");
+                    }
+                }   
+            }
+    </script>
+  </body>
+</html>
