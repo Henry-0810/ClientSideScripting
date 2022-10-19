@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    function removeElement(){
+      let items = Number(prompt("Enter the number you want to delete"));
+      let length = Number(prompt("What is the length you want for this array?"));
+      let arr = [];
+      for (let i = 0; i < length; i++) {
+        let inputs = Number(prompt("Please input array items"));
+        arr.push(inputs);
+      }
+      let valid = arr.includes(items);
+      if(valid === true) {
+        for (let j = 0; j < arr.length; j++) {
+          if (arr[j] == items)
+            arr.splice(j, 1);
+        }
+        alert(arr);
+      }
+      else
+        alert("Item not found!!!");
+    }
+    removeElement()
+  </script>
+</body>
+</html>
