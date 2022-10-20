@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function hoverRedtxt(){
+            let arr = document.getElementsByTagName('Strong');
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].style.color = 'red';
+            }
+        }
+        function hoverBack(){
+            let arr = document.getElementsByTagName('Strong');
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].style.color = 'initial';
+            }
+        }
+    </script>
+</head>
+<body>
+    <p style="color:blue;" onmouseover = "hoverRedtxt()" onmouseout="hoverBack()"><u>[On Mouse over here bold words of the following paragraph will be highlighted]</u></p>
+    <p><Strong>We</Strong> have just started <Strong>this</Strong> section for the users (<Strong>beginner</Strong> to intermediate)
+    who <Strong>want</Strong> to work with <Strong>various</Strong> JavaScript <Strong>problems</Strong> and write scripts online to <Strong>test</Strong> their JavaScript <Strong>skills</Strong>.
+</body>
+</html>
