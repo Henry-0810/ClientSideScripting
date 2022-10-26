@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function newWindow(link){
+        if(document.getElementById('tick').checked === true) {
+            window.open(link.href);
+            return false;
+        }
+        else
+            return true;
+    }
+</script>
+  <h1>My Favourite Links</h1>
+  <label for="tick">Open link in a new window</label><input type = "checkbox" id="tick"><br><br>
+
+    <a href = "https://www.google.com/" id="gg" onclick="return newWindow(this)">Google</a><br>
+    <a href = "https://www.youtube.com/" id="yt" onclick="return newWindow(this)">Youtube</a><br>
+    <a href = "https://www.ittralee.ie/en/" id="itt" onclick="return newWindow(this)">Munster Technological University</a>
+
+</body>
+</html>
