@@ -13,10 +13,12 @@
   <body>
   <script>
     let x = Array(5);
+    let max = 0;
     for(let i = 0; i < 5;i++){
        x[i] = Number(prompt("input a number"));
+       if(x[i] > max)
+         max = x[i];
     }
-    let max = Math.max(...x);
     alert("Largest Number in this array is " + max);
     </script>
   </body>
