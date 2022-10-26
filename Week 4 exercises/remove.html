@@ -6,8 +6,7 @@
 </head>
 <body>
   <script>
-    function removeElement(){
-      let items = Number(prompt("Enter the number you want to delete"));
+    function removeElement(items){
       let length = Number(prompt("What is the length you want for this array?"));
       let arr = [];
       for (let i = 0; i < length; i++) {
@@ -25,7 +24,8 @@
       else
         alert("Item not found!!!");
     }
-    removeElement()
+    let item = Number(prompt("Enter the number you want to delete"));
+    removeElement(item);
   </script>
 </body>
 </html>
