@@ -6,11 +6,11 @@
     <link href="style.css" rel="stylesheet" type="text/css" >
 	
     <script>
-    let vegetarian = Lots of mushrooms, black olives, bell peppers, onions, artichoke hearts, and fresh tomatoes.;
-    let hawaiian = Overloaded with juicy pineapple, smoked bacon, sliced ham, roasted red peppers, provolone cheese, and mozzarella cheese on a cheesy Parmesan crust.;
-    let meatLovers = Loads of pepperoni, savory Italian sausage, smoked bacon, hamburger, mushrooms, and extra cheese.;
-    let theWorks = An irresistible combination of pepperoni, ham, spicy Italian sausage, fresh-sliced onions and green peppers, gourmet baby portabella mushrooms, and ripe black olives.;
-    let fourCheese = Thin-crust pizza with a four-cheese blend of mozzarella, Parmesan, Romano, and Asiago, along with our special seasoning.;
+    let vegetarian = "Lots of mushrooms, black olives, bell peppers, onions, artichoke hearts, and fresh tomatoes.";
+    let hawaiian = "Overloaded with juicy pineapple, smoked bacon, sliced ham, roasted red peppers, provolone cheese, and mozzarella cheese on a cheesy Parmesan crust.";
+    let meatLovers = "Loads of pepperoni, savory Italian sausage, smoked bacon, hamburger, mushrooms, and extra cheese.";
+    let theWorks = "An irresistible combination of pepperoni, ham, spicy Italian sausage, fresh-sliced onions and green peppers, gourmet baby portabella mushrooms, and ripe black olives.";
+    let fourCheese = "Thin-crust pizza with a four-cheese blend of mozzarella, Parmesan, Romano, and Asiago, along with our special seasoning.";
     </script> 
 
 </head>
@@ -37,25 +37,25 @@
                             Click the buttons for a description of each pizza.</p>
                             <form action="" method="get">
                             <input type = "radio" id = "v" name = "pizzas" 
-                                onclick = "document.getElementById('pizzaDesc').value = 'Lots of mushrooms, black olives, bell peppers, onions, artichoke hearts, and fresh tomatoes.';">
+                                onclick = "document.getElementById('pizzaDesc').value = vegetarian;">
                             <label for="v">Vegetarian</label><br>
                             <input type = "radio" id = "h" name = "pizzas" value = "hawaiian" 
-                            onclick = "document.getElementById('pizzaDesc').value = 'Overloaded with juicy pineapple, smoked bacon, sliced ham, roasted red peppers, provolone cheese, and mozzarella cheese on a cheesy Parmesan crust.';">
+                            onclick = "document.getElementById('pizzaDesc').value = hawaiian;">
                             <label for="h">Hawaiian</label><br>
                             <input type = "radio" id = "m" name = "pizzas" value = "meatLovers"
-                            onclick = "document.getElementById('pizzaDesc').value = 'Loads of pepperoni, savory Italian sausage, smoked bacon, hamburger, mushrooms, and extra cheese.';">
+                            onclick = "document.getElementById('pizzaDesc').value = meatLovers;">
                             <label for="m">Meat Lovers</label><br>
                             <input type = "radio" id = "t" name = "pizzas" value = "theWorks"
-                            onclick = "document.getElementById('pizzaDesc').value = 'An irresistible combination of pepperoni, ham, spicy Italian sausage, fresh-sliced onions and green peppers, gourmet baby portabella mushrooms, and ripe black olives.';">
+                            onclick = "document.getElementById('pizzaDesc').value = theWorks;">
                             <label for="t">The Works</label><br>
                             <input type = "radio" id = "f" name = "pizzas" value = "fourCheese"
-                            onclick = "document.getElementById('pizzaDesc').value = 'Thin-crust pizza with a four-cheese blend of mozzarella, Parmesan, Romano, and Asiago, along with our special seasoning.';">
+                            onclick = "document.getElementById('pizzaDesc').value = fourCheese;">
                             <label for="f">Four Cheese</label><br>
                         <textarea style = "background-color:Transparent; border:none; overflow:hidden;font:10px Tahoma;color:#3F3F3F;" 
                              id = "pizzaDesc"
                              cols = '75'
                              rows = '20'></textarea>
-                        
+                            </form>
                     </div>
                 </div>
                 <div class="wes3">
