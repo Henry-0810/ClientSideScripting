@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id ='btn' >Click me!</button>
+<p id = 'str' style ='font-size:40px;'></p>
+    <script>
+        let button = document.getElementById('btn');
+        button.addEventListener('click',function(e){document.getElementById('str').innerHTML = '<b>Hello World!</b>';
+            console.log(e);},false)
+        //button.addEventListener('click',function(){document.getElementById('str').innerHTML = '<b>Hello Again</b>';},false);
+
+    </script>
+
+</body>
+</html>
