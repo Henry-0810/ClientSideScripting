@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Press V to change background color of this web page.</h1>
+<script>
+    let webPage = document.body;
+
+    function chgBgColor(e) {
+        if(e.key === 'v'){
+            document.body.style.backgroundColor = "violet";
+        }
+        console.log(e);
+    }
+
+    function oriBgColor(e){
+        if(e.key === 'v'){
+            document.body.style.backgroundColor = "transparent";
+        }
+        console.log(e);
+    }
+
+    webPage.addEventListener("keydown",chgBgColor,false);
+    webPage.addEventListener("keyup",oriBgColor,false);
+</script>
+</body>
+</html>
