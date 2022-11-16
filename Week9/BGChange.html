@@ -11,20 +11,19 @@
 
     function chgBgColor(e) {
         if(e.key === 'v'){
-            document.body.style.backgroundColor = "violet";
+            webPage.style.backgroundColor = "violet";
         }
-        console.log(e);
+        console.log(e.key);
     }
 
     function oriBgColor(e){
         if(e.key === 'v'){
-            document.body.style.backgroundColor = "transparent";
+            webPage.style.backgroundColor = "transparent";
         }
-        console.log(e);
     }
 
-    webPage.addEventListener("keydown",chgBgColor,false);
-    webPage.addEventListener("keyup",oriBgColor,false);
+    window.addEventListener("keydown",chgBgColor,false);
+    window.addEventListener("keyup",oriBgColor,false);
 </script>
 </body>
 </html>
