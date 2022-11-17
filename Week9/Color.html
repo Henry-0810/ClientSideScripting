@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Colors!</h1>
+
+  <select name="colors" id="colors" style="font-size:15px">
+      <option value="blue">Blue</option>
+      <option value="red">Red</option>
+      <option value="yellow">Yellow</option>
+      <option value="Green">Green</option>
+      <option value="Black">Black</option>
+  </select>
+
+<button id="btn">Remove this</button>
+
+<script>
+    let x = document.getElementById("colors");
+
+    let removal = function(e){
+        let i = x.selectedIndex;
+        x[i].remove();
+    }
+    let btn = document.getElementById("btn");
+    btn.addEventListener('click',removal);
+</script>
+</body>
+</html>

@@ -6,18 +6,34 @@
 </head>
 <body>
   <h1>Pizza Take Outs inc.</h1>
-  <input type="'radio" value="12.90" name="menu">Hawaiian Chicken(€12.90)
-  <input type="'radio" value="12.90" name="menu">Beef Pepperoni(€15.90)
-  <input type="'radio" value="12.90" name="menu">Aloha Chicken(€13.90)
-  <input type="'radio" value="12.90" name="menu">Double Cheese(€10.90)
-  <input type="'radio" value="12.90" name="menu">Seafood Sensation(€19.90)
+  <h2>Select a pizza:</h2>
+  <input type="radio" value="12.90" name="menu">Hawaiian Chicken(€12.90)<br>
+  <input type="radio" value="15.90" name="menu">Beef Pepperoni(€15.90)<br>
+  <input type="radio" value="13.90" name="menu">Aloha Chicken(€13.90)<br>
+  <input type="radio" value="10.90" name="menu">Double Cheese(€10.90)<br>
+  <input type="radio" value="19.90" name="menu">Seafood Sensation(€19.90)<br>
+  <h2>Choose toppings:</h2>
+  <input type="checkbox" value="2.90" name="toppings">Cheese(€2.90)<br>
+  <input type="checkbox" value="3.90" name="toppings">Mushrooms(€3.90)<br>
+  <input type="checkbox" value="1.90" name="toppings">Anchovies(€1.90)<br>
 
-  <input type="checkbox" value="2.90" name="toppings">Cheese
-  <input type="checkbox" value="2.90" name="toppings">Mushrooms
-  <input type="checkbox" value="2.90" name="toppings">Anchovies
+  <button id="btn">Calc price</button>
+  <p>Price:€<span></span></p>
 
 <script>
-
+  let btn = document.querySelector("#btn");
+  let getPrice = function(e){
+    let totPrice = document.getElementsByTagName("span");
+    let radChecked = document.querySelector('[name="menu"]:checked');
+      if(radChecked != null){
+        totPrice[0].innerText = (Number(radChecked.value)).toFixed(2);
+      }
+    let CbChecked = document.querySelectorAll('[name="toppings"]:checked');
+    for (let i of CbChecked) {
+        totPrice[0].innerText = (Number(totPrice[0].innerText) + Number(i.value)).toFixed(2);
+      }
+  }
+  btn.addEventListener('click',getPrice);
 </script>
 </body>
 </html>

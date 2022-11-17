@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    function leapYr(year){
+      if(year%4 === 0)
+        alert(`${year} is a leap year`);
+      else if(year%100 === 0){
+        if(year%400 === 0)
+          alert(`${year} is a leap year`);
+        else
+          alert(`${year} is not a leap year!`);
+      }
+      else
+        alert(`${year} is not a leap year`);
+    }
+  </script>
+</head>
+<body>
+<form>
+  Please enter a year<input type = "text" id = "yr" value=""><br>
+  <input type = "button" onclick = "leapYr(document.getElementById('yr').value);" value = "Calculate whether is it a leap year">
+</form>
+</body>
+</html>
