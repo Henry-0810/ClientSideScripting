@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">
+<input id = "breadId" type="checkbox" name="bread">Bread $2.5
+<input id = "milkId" type="checkbox" name="milk">Milk $2.0
+<button id="submit">Submit</button><br>
+    <h1>Shopping List</h1>
+<script>
+    let breadCheckbox = document.querySelector("#breadId");
+    let bread = function(e){
+        let breadPara = document.createElement('p');
+        breadPara.setAttribute('id','breadOutput');
+        let breadNode = document.createTextNode("Bread @2.5");
+        let element1 = document.getElementById("div1");
+        let getID = document.getElementById("breadOutput");
+        if(breadCheckbox.checked){
+            breadPara.appendChild(breadNode);
+            element1.appendChild(breadPara);
+        }
+        else{
+            getID.remove();
+        }
+        console.log(e);
+    }
+    let milkCheckbox = document.querySelector("#milkId");
+    let milk = function(e){
+        let milkPara = document.createElement('p');
+        milkPara.setAttribute('id','milkOutput');
+        let milkNode = document.createTextNode("Milk @2.0");
+        let element1 = document.getElementById("div1");
+        let getID = document.getElementById("milkOutput");
+        if(milkCheckbox.checked){
+            milkPara.appendChild(milkNode);
+            element1.appendChild(milkPara);
+        }
+        else{
+            getID.remove();
+        }
+        console.log(e);
+    }
+    let submitBtn = document.querySelector("#submit");
+    let submit = function(e){
+        let p = document.createElement("p");
+        let submitInput1 = document.createElement("input");
+        submitInput1.setAttribute('type', 'radio');
+        submitInput1.setAttribute('id','rad1');
+        p.appendChild(submitInput1);
+
+        let label1 = document.createElement("label");
+        label1.setAttribute('for','rad1');
+        label1.innerHTML = "parcel";
+        p.appendChild(label1);
+
+        let submitInput2 = document.createElement("input");
+        submitInput2.setAttribute('type', 'radio');
+        submitInput2.setAttribute('id','rad2');
+        p.appendChild(submitInput2);
+
+        let label2 = document.createElement("label");
+        label2.setAttribute('for','rad1');
+        label2.innerHTML = "postage";
+        p.appendChild(label2);
+
+        let button = document.createElement("button");
+        button.innerHTML = "submitDelivery";
+        p.appendChild(button);
+
+        let element1 = document.getElementById("div1");
+        element1.appendChild(p);
+        console.log(e);
+    }
+    breadCheckbox.addEventListener('change',bread);
+    milkCheckbox.addEventListener('change',milk);
+    submitBtn.addEventListener('click',submit,{once:true});
+</script>
+</div>
+</body>
+</html>
