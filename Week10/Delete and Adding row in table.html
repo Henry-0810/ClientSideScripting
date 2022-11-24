@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table, th, td{
+            border: 2px solid;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <table id = "t1">
+        <tr>
+            <th>Name</th>
+            <th>Student ID</th>
+        </tr>
+        <tr>
+            <td>Patrick</td>
+            <td>S01</td>
+        </tr>
+        <tr>
+            <td>Douglas</td>
+            <td>S02</td>
+        </tr>
+        <tr>
+            <td>Gary</td>
+            <td>S03</td>
+        </tr>
+        <tr>
+            <td>Barry</td>
+            <td>S04</td>
+        </tr>
+    </table><br>
+<button id="add">Add Row</button>
+<button id="delete">Delete Row</button><br><br>
+    <table id="t2">
+        <tr>
+            <td title = "">r1c1</td>
+            <td title = "">r1c2</td>
+        </tr>
+        <tr>
+            <td title = "">r2c1</td>
+            <td title = "">r2c2</td>
+        </tr>
+        <tr>
+            <td title = "">r3c1</td>
+            <td title = "">r3c2</td>
+        </tr>
+    </table>
+
+<script>
+    let table = document.querySelector("#t1");
+    let addRow = function(e){
+        let choices = Number(window.prompt("Add to top {Type 1}\nAdd to bottom {Type -1}"));
+        if(choices !== 1 && choices !== -1 && choices == null){
+            alert("Error!!!");
+        }
+        let inputName = window.prompt("Enter a name");
+        let inputStdID = window.prompt("Enter Student ID");
+        let row = table.insertRow(choices);
+        let cell1 = row.insertCell(0);
+        let cell2 = row.insertCell(1);
+        cell1.innerHTML = inputName;
+        cell2.innerHTML = inputStdID;
+    }
+    document.querySelector("#add").addEventListener('click',addRow,false);
+    document.querySelector("#delete").addEventListener('click',function (e){
+        let choices = Number(window.prompt("Delete top {Type 1}\nDelete bottom {Type -1}"));
+        if(choices !== 1 && choices !== -1 && choices == null){
+            alert("Error!!!");
+        }
+        table.deleteRow(choices);
+    },false);
+
+    let table2 = document.getElementById("t2");
+    let showToolTip = function(e){
+        let hoverOver = e.target;
+        hoverOver.setAttribute("title",hoverOver.textContent);
+    }
+    table2.addEventListener("onmouseover",showToolTip,false);
+</script>
+</body>
+</html>
