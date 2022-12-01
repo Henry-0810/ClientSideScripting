@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    let moveJackHammer;
+    let jackHammer = new Array(11);
+    let curJH = 0;
+    jackHammer[0] = "jackhammer0.gif";
+    jackHammer[1] = "jackhammer1.gif";
+    jackHammer[2] = "jackhammer2.gif";
+    jackHammer[3] = "jackhammer3.gif";
+    jackHammer[4] = "jackhammer4.gif";
+    jackHammer[5] = "jackhammer5.gif";
+    jackHammer[6] = "jackhammer6.gif";
+    jackHammer[7] = "jackhammer7.gif";
+    jackHammer[8] = "jackhammer8.gif";
+    jackHammer[9] = "jackhammer9.gif";
+    jackHammer[10] = "jackhammer10.gif";
+
+    function play() {
+        if (curJH === 10)
+            curJH = 0;
+        else {
+            ++curJH;
+            document.images[0].src = jackHammer[curJH];
+        }
+    }
+
+      function start(){
+          if(moveJackHammer!=null)
+              clearInterval(moveJackHammer);
+          moveJackHammer=setInterval("play()",100);
+    }
+  </script>
+<p>
+    <img src="jackhammer0.gif" height="100" width="100">
+</p>
+<form action="">
+    <p>
+        <input type="button" value="Play" onclick="start();">
+        <input type="button" value="Stop" onclick="clearInterval(moveJackHammer);">
+    </p>
+</form>
+</body>
+</html>
